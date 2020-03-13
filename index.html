@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MAZE Game</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div id="game-block">
+    <div id="game-area">
+      <h1 class="game_title">Adjust difficulty first</h1>
+      <input type="range" id="range" value="25" min="3" max="50">
+      <div><button type="button" class="start_game_btn hide">Start Game</button></div>
+      <div><button type="button" class="start_end_btn" onclick="if(confirm('Are you sure')) window.close()">Quite
+        Game</button></div>
+    </div>
+  </div>
+  <super-modal id="result">
+    <h1 slot="header">Result</h1>
+    <div class="result">
+      <h3 class="teal">Highscore: <span class="highscore-span"></span></h3>
+      <h1>Congratulation! You Won</h1>
+      <div class="score">
+        <h2>Time elapsed: </h2> &nbsp;&nbsp;&nbsp;
+        <h2 class="elapsed-time"></h2>&nbsp;&nbsp;&nbsp;
+        <h2>Seconds</h2>&nbsp;&nbsp;&nbsp;
+      </div>
+      
+    </div>
+    <button slot="footer" class="start_end_btn main-menu">Main Menu</button>
+  </super-modal>
+  <script src="./js/matter.min.js"></script>
+  <script src="./js/super-modal.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>
